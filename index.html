@@ -1,15 +1,38 @@
 <html>
     <head>
-        <title>RSS Mobile Shop</title>
+        <title>RHH Mobile Shop</title>
         <style>
             .image {
                 width: 200px;
                 height: auto;
             }
+            footer{
+                background-color: bisque;
+                color: brown;
+                text-align: center;
+                top: 10px;
+            }
+            body {
+                background-color: antiquewhite;
+            }
+            table, th, td{
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            h1 {
+                text-align: center;
+            }
+            .change{
+                color: brown;
+            }
+            .body{
+                background-color: aquamarine;
+            }
         </style>
     </head>
     <body>
-        <h1>RSS Mobile Shop</h1>
+        <button onclick="change_background()">Change Background</button>
+        <h1 onclick="changeH1()">RSS Mobile Shop</h1>
         <div class="section">
             <table>
                 <tr>
@@ -17,6 +40,7 @@
                     <td>Product Name</td>
                     <td>Product Description</td>
                     <td>Product Price</td>
+                    <td>Link</td>
                 </tr>
                 <tr>
                     <td><img class="image" src="iphone13.jpg"/></td>
@@ -30,6 +54,7 @@
                         </ul>
                     </td>
                     <td>£729.00</td>
+                    <td><a href="https://www.amazon.co.uk/Apple-iPhone-13-128GB-Blue/dp/B09G9HQHRH/ref=sr_1_1_sspa?crid=IA1CATH8FHG0&keywords=iphone%2B13&qid=1652102701&sprefix=iphone%2Caps%2C90&sr=8-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE2VTI1SkFOVEFTQSZlbmNyeXB0ZWRJZD1BMDMzODg4NTFZN0M5UklLTE8wV1omZW5jcnlwdGVkQWRJZD1BMDA3NDg1OExUUDFWNEJNMjI3WSZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1">Link</a></td>
                 </tr>
                 <tr>
                     <td><img class="image" src="Galaxy s22.jpg"/></td>
@@ -42,6 +67,7 @@
                         </ul>
                     </td>
                     <td>£739.00</td>
+                    <td><a href="https://www.amazon.co.uk/Samsung-Galaxy-Android-Smartphone-Phantom/dp/B09NRRVPZ7/ref=sr_1_1_sspa?keywords=samsung%2Bphone&qid=1652102749&sprefix=sam%2Caps%2C90&sr=8-1-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUExSTRWWlEyNFM1TzdGJmVuY3J5cHRlZElkPUEwMjk0MzA5MVBKTlQwSVhBNFJYSSZlbmNyeXB0ZWRBZElkPUEwMzE5NDEzMzdMRjRVNTkzMU5UTyZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1">Link</a></td>
                 </tr>
                 <tr>
                     <td><img class="image" src="googlePixcel.jpg"/></td>
@@ -54,6 +80,7 @@
                         </ul>
                     </td>
                     <td>£599.00</td>
+                    <td><a href="https://www.amazon.co.uk/Google-Pixel-Smartphone-Megapixel-Wide-Angle/dp/B09G77DR7C/ref=sr_1_2_sspa?keywords=mobile%2Bphones&qid=1652102849&s=electronics&sprefix=mobile%2Celectronics%2C84&sr=1-2-spons&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzVjUwSkZST05FNDRJJmVuY3J5cHRlZElkPUEwNTU1NTIzMVBFQVE4SE1NRDNQRCZlbmNyeXB0ZWRBZElkPUEwNzAyNjQzMVAxM0EzU05TSU5ETyZ3aWRnZXROYW1lPXNwX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU&th=1">Link</a></td>
                 </tr>
                 <tr>
                     <td><img class="image" src="iphone13 pro max.jpg"/></td>
@@ -66,6 +93,7 @@
                         </ul>
                     </td>
                     <td>£1549.00</td>
+                    <td><a href="https://www.amazon.co.uk/dp/B09V4FH1DN/ref=uk_a_phone11_5?th=1">Link</a></td>
                 </tr>
                 <tr>
                     <td><img class="image" src="xiomi.jpg"/></td>
@@ -78,9 +106,30 @@
                         </ul>
                     </td>
                     <td>£219.00</td>
+                    <td><a href="https://www.amazon.co.uk/Xiaomi-Redmi-Note-Pro-Smartphone/dp/B08XM1ZJQ8/ref=sr_1_5?keywords=mobile%2Bphones&qid=1652104465&sprefix=mobile%2Caps%2C83&sr=8-5&th=1">Link</a></td>
                 </tr>
             </table>
         </div>
+        <footer onclick="change_footer()">
+            <p>RSS Mobile Shop</p>
+            <p>98 Lynton Avenue, London, NW96AT</p>
+        </footer>
 
     </body>
+    <script>
+        function changeH1(){
+            let h1Node = document.getElementsByTagName("h1")[0]
+            h1Node.innerText = "RHH Mobile Boutique"
+            h1Node.classList.toggle('change')
+        }
+        function change_background(){
+            let background = document.getElementsByTagName('body')[0]
+            background.style.backgroundColor= "aquamarine"
+        }
+        function change_footer(){
+            let footer = document.getElementsByTagName("p")[1]
+            footer.innerText = "58 Lynton Avenue, London, NW96PE"
+        }
+
+    </script>
 </html>
